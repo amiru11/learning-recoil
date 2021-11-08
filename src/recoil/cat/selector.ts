@@ -9,5 +9,3 @@ export const randomCat = selector({
     return data.file;
   },
 });
-
-export default null;

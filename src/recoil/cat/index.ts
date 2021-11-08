@@ -1,5 +1,6 @@
-// import catAtom from './atom';
+import catAtom from './atom';
 import { randomCat } from './selector';
 
 export { randomCat };
-export default '';
+
+export default catAtom;
