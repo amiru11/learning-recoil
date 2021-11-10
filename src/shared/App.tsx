@@ -5,9 +5,9 @@ import Router from 'shared/Router';
 
 function App(): JSX.Element {
   return (
-    <div className="main-container">
+    <main className="main-container">
       <Router />
-    </div>
+    </main>
   );
 }
 
