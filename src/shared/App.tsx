@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.scss';
 
-import RandomCat from '../components/RandomCat';
+import Router from 'shared/Router';
 
-function App() {
-  return <div className="main-container">1</div>;
+function App(): JSX.Element {
+  return (
+    <div className="main-container">
+      <Router />
+    </div>
+  );
 }
 
 export default App;

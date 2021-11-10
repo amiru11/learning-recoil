@@ -17,6 +17,7 @@ module.exports = {
     quotes: ['error', 'single'], //싱글 쿼터 사용
     '@typescript-eslint/quotes': ['error', 'single'], //싱글 쿼터 사용
     'no-unused-vars': 'off', //사용안한 변수 경고 중복
+    'no-undef': 'off',
     'spaced-comment': 'off', //주석을 뒤에 쓰지 말라는 경고
     '@typescript-eslint/no-unused-vars': 'warn', //사용안한 변수는 경고
     'jsx-a11y/control-has-associated-label': 'off', // 상호작용하는 엘리먼트에 label을 넣는다

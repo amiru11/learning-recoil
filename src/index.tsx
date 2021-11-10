@@ -1,19 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { render } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 import 'styles/index.scss';
 import App from 'shared/App';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
+render(
   <React.StrictMode>
     <RecoilRoot>
-      <Router>
-        <Route path="/">
-          <App />
-        </Route>
-      </Router>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </RecoilRoot>
   </React.StrictMode>,
   document.getElementById('root')
