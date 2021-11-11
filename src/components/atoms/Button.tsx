@@ -3,7 +3,7 @@ import React from 'react';
 interface IButtonProps {
   buttonTitle: string;
   handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  children: JSX.Element | string;
+  children: JSX.Element[] | JSX.Element | string;
 }
 
 function Button({

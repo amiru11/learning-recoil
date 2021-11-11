@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { GoSearch } from 'react-icons';
+import { GoSearch } from 'react-icons/go';
+import { getUser } from 'recoil/user';
 
-import { Img, Input, Button } from 'components/atoms';
+import { Input, Button } from 'components/atoms';
+
 function SearchInput(): JSX.Element {
   const [username, setUsername] = useState<string>('');
 
@@ -9,12 +11,15 @@ function SearchInput(): JSX.Element {
     setUsername(event.target.value);
   };
 
-  const handleClickSumbit = () => () => {};
+  const handleClickSumbit = (): void => {
+    getUser(username);
+  };
+
   return (
     <div className="seach-input-container">
       <GoSearch />
       <Input type="text" value={username} handleChange={handleChangeUsername} />
-      <Button buttonTitle="Search" handleClick={}>
+      <Button buttonTitle="Search" handleClick={handleClickSumbit}>
         Search
       </Button>
     </div>
