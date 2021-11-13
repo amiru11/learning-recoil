@@ -5,9 +5,12 @@ import { atom } from 'recoil';
  * atom() 함수에 고유한 키(key)와 기본값(default)을 전달해서 작성
  * key는 unique하며 문자열이다.
  */
-const userAtom = atom({
+export const userAtom = atom({
   key: 'userAtom',
   default: null,
 });
 
-export default userAtom;
+export const keywordAtom = atom({
+  key: 'keyword',
+  default: ''
+});

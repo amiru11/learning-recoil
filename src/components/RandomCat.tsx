@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
-import { randomCat } from '../recoil/cat';
+import { randomCat } from '../state/cat';
 
 export default function RandomCat(): JSX.Element {
   const photoUrl = useRecoilValue(randomCat);

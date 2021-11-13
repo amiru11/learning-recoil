@@ -1,0 +1,33 @@
+.search-input-container {
+  background-color: var(--dark-theme-sub-color);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  input {
+    color: #ffffff;
+    font-size: 20px;
+    flex: 1 1 0;
+    margin: 0 20px;
+  }
+
+  .search-button {
+    background-color: rgba(3, 120, 254, 1);
+    border-radius: 8px;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 10px;
+
+    transition: background-color 0.5s;
+
+    &:hover {
+      background-color: rgba(3, 120, 254, 0.7);
+    }
+
+    &:active {
+      background-color: rgba(3, 120, 254, 0.8);
+    }
+  }
+}

@@ -1,12 +1,15 @@
 import React from 'react';
 import { HeadText } from 'components/atoms';
+
+import './Header.scss';
+
 import { ThemeButton, SearchInput } from 'components/molcules';
 
-function Header() {
+function Header(): JSX.Element {
   return (
     <header className="header">
       <nav>
-        <HeadText className="title" size="h2" text="devfinder" />;
+        <HeadText className="title" size="h2" text="devfinder" />
         <ThemeButton />
       </nav>
       <div className="search-input-wrap">

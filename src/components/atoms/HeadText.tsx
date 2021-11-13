@@ -3,7 +3,7 @@ import React from 'react';
 interface IHeadTextProps {
   size: string;
   text: string;
-  className: string;
+  className?: string;
 }
 
 function HeadText({ size, text, className }: IHeadTextProps) {

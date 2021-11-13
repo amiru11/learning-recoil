@@ -1,0 +1,10 @@
+.theme-button {
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  & > span {
+    margin-right: 10px;
+  }
+}

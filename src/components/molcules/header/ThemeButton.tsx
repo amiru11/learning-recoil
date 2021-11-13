@@ -1,13 +1,19 @@
 import React from 'react';
 import { MdOutlineLightMode, MdOutlineDarkMode } from 'react-icons/md';
 
+import './ThemeButton.scss';
+
 import { Button } from 'components/atoms';
 
-function ThemeButton() {
+function ThemeButton(): JSX.Element {
   return (
-    <Button buttonTitle="theme Changer" handleClick={() => {}}>
+    <Button
+      className="theme-button"
+      buttonTitle="theme Changer"
+      handleClick={() => {}}
+    >
       <span>Light</span>
-      <MdOutlineLightMode />
+      <MdOutlineLightMode size={15} />
     </Button>
   );
 }
