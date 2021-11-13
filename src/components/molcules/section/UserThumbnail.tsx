@@ -1,6 +1,8 @@
 import React from 'react';
 import { Img } from 'components/atoms';
 
+import './UserThumbnail.scss';
+
 interface IUserThumbnailProps {
   tag: string;
   nickname: string;

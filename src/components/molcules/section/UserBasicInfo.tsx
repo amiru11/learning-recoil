@@ -1,6 +1,9 @@
 import React from 'react';
-import { HeadText, Paragraph, Alink } from 'components/atoms';
 import { formatDate } from 'utils/date';
+
+import './UserBasicInfo.scss';
+
+import { HeadText, Paragraph, Alink } from 'components/atoms';
 
 interface IUserBasicInfoProps {
   name: string;
@@ -21,7 +24,7 @@ function UserBasicInfo({
     <section className="basic-info-container">
       <div className="title-wrap">
         <HeadText className="title" size="h2" text={name} />
-        <Paragraph className="date" text={formatDate(createdAt, '-')} />
+        <Paragraph className="date" text={`Joined ${formatDate(createdAt)}`} />
       </div>
       <div className="title-wrap">
         <Alink href={htmlUrl} text={`@${login}`} />

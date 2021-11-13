@@ -4,7 +4,7 @@ import { getUserByName } from '../../api/user';
 
 export const getUser = selector({
   key: 'user',
-  get: ({ get }) => async () => {
+  get: async ({ get }) => {
     const userName = get(keywordAtom);
     if (!userName) return null;
     const { data } = await getUserByName(userName);

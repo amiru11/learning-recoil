@@ -1,0 +1,12 @@
+.user-section-container {
+  background-color: var(--dark-theme-sub-color);
+  border-radius: 16px;
+  display: flex;
+  padding: 30px;
+  margin-top: 30px;
+
+  .user-info-wrap {
+    flex: 1 1 0;
+    margin-left: 20px;
+  }
+}

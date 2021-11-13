@@ -17,6 +17,7 @@ function SearchInput(): JSX.Element {
 
   const handleClickSumbit = (): void => {
     if (!username) return;
+    console.log('username', username);
     setKeyword(username);
   };
 

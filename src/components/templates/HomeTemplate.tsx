@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
 import './HomeTemplate.scss';
 
@@ -8,7 +8,9 @@ function HomeTemplate(): JSX.Element {
   return (
     <div className="home-container">
       <Header />
-      <UserSection />
+      <Suspense fallback={<></>}>
+        <UserSection />
+      </Suspense>
     </div>
   );
 }

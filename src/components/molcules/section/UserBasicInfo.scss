@@ -1,0 +1,19 @@
+.basic-info-container {
+  .title-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      font-size: 24px;
+    }
+
+    .date {
+      color: #cccccc;
+    }
+
+    &.title-wrap {
+      margin-top: 10px;
+    }
+  }
+}
