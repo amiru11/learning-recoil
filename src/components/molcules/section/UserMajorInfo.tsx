@@ -1,4 +1,7 @@
 import React from 'react';
+
+import './UserMajorInfo.scss';
+
 import { HeadText, Paragraph } from 'components/atoms';
 
 interface IUserMajorInfoProps {
@@ -14,16 +17,16 @@ function UserMajorInfo({
 }: IUserMajorInfoProps): JSX.Element {
   return (
     <div className="major-info-container">
-      <ul>
-        <li>
-          <Paragraph className="title" text="repos" />
+      <ul className="info-list">
+        <li className="info-list-item">
+          <Paragraph className="title" text="Repos" />
           <HeadText className="desc" size="h2" text={`${repositoryCount}`} />
         </li>
-        <li>
+        <li className="info-list-item">
           <Paragraph className="title" text="Followers" />
           <HeadText className="desc" size="h2" text={`${followers}`} />
         </li>
-        <li>
+        <li className="info-list-item">
           <Paragraph className="title" text="Following" />
           <HeadText className="desc" size="h2" text={`${following}`} />
         </li>

@@ -1,19 +1,69 @@
+@import '../../../styles/mixin';
+
 .basic-info-container {
-  .title-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
 
-    .title {
-      font-size: 24px;
+  .info-wrap {
+    flex: 1 1 0;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 20px;
+
+    .title-wrap {
+      .title {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+      }
     }
+    .date-wrap {
+      p.date {
+        color: #cccccc;
+      }
+    }
+  }
 
-    .date {
+  .bio-wrap {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    p.bio {
       color: #cccccc;
     }
 
-    &.title-wrap {
-      margin-top: 10px;
+    &.mobile {
+      display: none;
+    }
+  }
+  @include respond(tablet) {
+    .info-wrap {
+      grid-auto-flow: column;
+      grid-template-columns: 1fr;
+    }
+    .bio-wrap {
+      display: none;
+
+      &.mobile {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  @include respond(mobile) {
+    .info-wrap {
+      grid-auto-flow: column;
+      grid-template-columns: 1fr;
+    }
+    .bio-wrap {
+      display: none;
+
+      &.mobile {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+      }
     }
   }
 }

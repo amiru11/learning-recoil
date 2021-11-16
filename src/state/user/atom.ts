@@ -12,5 +12,5 @@ export const userAtom = atom({
 
 export const keywordAtom = atom({
   key: 'keyword',
-  default: 'amiru11'
+  default: 'octocat'
 });

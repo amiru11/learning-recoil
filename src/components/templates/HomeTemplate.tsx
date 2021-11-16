@@ -8,7 +8,7 @@ function HomeTemplate(): JSX.Element {
   return (
     <div className="home-container">
       <Header />
-      <Suspense fallback={<></>}>
+      <Suspense fallback={<>Loading...</>}>
         <UserSection />
       </Suspense>
     </div>

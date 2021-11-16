@@ -1,15 +1,11 @@
 import React from 'react';
-import { useRecoilValue, useRecoilValueLoadable } from 'recoil';
+import { useRecoilValue } from 'recoil';
 
 import { getUser } from 'state/user';
-
-import { LOADABLE_STATUS } from 'contants';
-import { IUser } from 'interfaces';
 
 import './UserSection.scss';
 
 import {
-  UserThumbnail,
   UserBasicInfo,
   UserMajorInfo,
   UserMinorInfo,
@@ -17,19 +13,6 @@ import {
 
 function UserSection(): JSX.Element {
   const userInfo = useRecoilValue(getUser);
-  console.log(userInfo);
-  // if (userInfoLoadable.state === LOADABLE_STATUS.LOADING) {
-  //   return <>loading</>;
-  // }
-
-  // if (userInfoLoadable.state === LOADABLE_STATUS.ERROR) {
-  //   return userInfoLoadable.contents;
-  // }
-
-  // if (userInfoLoadable.state === LOADABLE_STATUS.SUCCESS) {
-  //   const userInfo: IUser = userInfoLoadable.contents;
-
-  // }
 
   if (!userInfo) {
     return <></>;
@@ -37,15 +20,9 @@ function UserSection(): JSX.Element {
 
   return (
     <div className="user-section-container">
-      <div className="user-thumbnail-wrap">
-        <UserThumbnail
-          avatarUrl={userInfo?.avatar_url}
-          nickname={userInfo?.name ?? ''}
-          tag={`${userInfo.login}`}
-        />
-      </div>
       <div className="user-info-wrap">
         <UserBasicInfo
+          avatar_url={userInfo?.avatar_url ?? ''}
           name={userInfo?.name ?? ''}
           login={userInfo?.login ?? ''}
           createdAt={`${userInfo?.created_at ?? ''}`}
@@ -58,10 +35,10 @@ function UserSection(): JSX.Element {
           following={userInfo?.following ?? 0}
         />
         <UserMinorInfo
-          location={userInfo.location}
-          twitterUsername={userInfo?.twitter_username ?? ''}
-          blog={userInfo?.blog ?? ''}
-          company={userInfo?.company ?? ''}
+          location={userInfo?.location ?? 'Not Available'}
+          twitterUsername={userInfo?.twitter_username ?? 'Not Available'}
+          blog={userInfo?.blog ?? 'Not Available'}
+          company={userInfo?.company ?? 'Not Available'}
         />
       </div>
     </div>

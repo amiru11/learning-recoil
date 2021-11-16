@@ -1,0 +1,23 @@
+.major-info-container {
+  margin-top: 30px;
+
+  .info-list {
+    background-color: #151c2f;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .info-list-item {
+      padding: 20px;
+
+      .title {
+        color: #cccccc;
+      }
+
+      .desc {
+        margin-top: 16px;
+        font-size: 20px;
+      }
+    }
+  }
+}

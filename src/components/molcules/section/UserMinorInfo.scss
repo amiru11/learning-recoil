@@ -1,0 +1,32 @@
+@import '../../../styles/mixin';
+
+.minor-info-container {
+  margin-top: 30px;
+
+  .icon-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 20px;
+
+    .icon-list-item {
+      display: flex;
+      align-items: center;
+
+      .desc {
+        margin-left: 10px;
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+  }
+  @include respond(tablet) {
+  }
+
+  @include respond(mobile) {
+    .icon-list {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+    }
+  }
+}

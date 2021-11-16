@@ -17,14 +17,18 @@ function SearchInput(): JSX.Element {
 
   const handleClickSumbit = (): void => {
     if (!username) return;
-    console.log('username', username);
     setKeyword(username);
   };
 
   return (
     <div className="search-input-container">
       <GoSearch color="#0378fe" size={20} />
-      <Input type="text" value={username} handleChange={handleChangeUsername} />
+      <Input
+        type="text"
+        value={username}
+        handleChange={handleChangeUsername}
+        placeholder="Search GitHub username.."
+      />
       <Button
         className="search-button"
         buttonTitle="Search"

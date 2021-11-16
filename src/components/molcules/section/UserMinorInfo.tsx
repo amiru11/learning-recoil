@@ -2,6 +2,8 @@ import React from 'react';
 import { GoLocation, GoLink, GoBriefcase } from 'react-icons/go';
 import { CgTwitter } from 'react-icons/cg';
 
+import './UserMinorInfo.scss';
+
 import { Alink } from 'components/atoms';
 
 interface IUserMinorInfoProps {
@@ -19,22 +21,22 @@ function UserMinorInfo({
 }: IUserMinorInfoProps): JSX.Element {
   return (
     <div className="minor-info-container">
-      <ul>
-        <li>
-          <GoLocation />
-          <span>{location}</span>
+      <ul className="icon-list">
+        <li className="icon-list-item">
+          <GoLocation size="16" color="#ffffff" />
+          <span className="desc">{location}</span>
         </li>
-        <li>
-          <CgTwitter />
-          <span>{twitterUsername}</span>
+        <li className="icon-list-item">
+          <CgTwitter size="16" color="#ffffff" />
+          <span className="desc">{twitterUsername}</span>
         </li>
-        <li>
-          <GoLink />
-          <Alink href={blog} text={blog} />
+        <li className="icon-list-item">
+          <GoLink size="16" color="#ffffff" />
+          <Alink className="desc" href={blog} text={blog} />
         </li>
-        <li>
-          <GoBriefcase />
-          <span>{company}</span>
+        <li className="icon-list-item">
+          <GoBriefcase size="16" color="#ffffff" />
+          <span className="desc">{company}</span>
         </li>
       </ul>
     </div>
