@@ -1,10 +1,29 @@
 .theme-button {
+  border-radius: 16px;
   color: var(--lightest-font-color);
   cursor: pointer;
   display: flex;
   align-items: center;
+  padding: 6px 12px;
+  position: relative;
+  animation: zoom-in-out 2s ease 0s infinite normal;
 
-  & > span {
+  & > .title {
     margin-right: 10px;
+  }
+}
+
+@keyframes zoom-in-out {
+  0% {
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -ms-transform: scale(1);
+    transform: scale(1);
   }
 }

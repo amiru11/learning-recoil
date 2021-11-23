@@ -20,13 +20,10 @@ function SearchInput(): JSX.Element {
     setKeyword(username);
   };
 
-  const handleKeyDown = ({
-    key,
-    preventDefault,
-  }: React.KeyboardEvent<HTMLInputElement>) => {
-    preventDefault();
-    if (key === 'Enter') {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
       handleClickSumbit();
+      event.preventDefault();
     }
   };
 

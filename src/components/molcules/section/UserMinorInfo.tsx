@@ -1,13 +1,11 @@
 import React from 'react';
 import { GoLocation, GoLink, GoBriefcase } from 'react-icons/go';
 import { GrTwitter } from 'react-icons/gr';
-import { THEME_TYPE } from 'contants';
 
 import './UserMinorInfo.scss';
 
 import { Alink } from 'components/atoms';
 
-const { LIGHT, DARK } = THEME_TYPE;
 interface IUserMinorInfoProps {
   location: string;
   twitterUsername: string;
