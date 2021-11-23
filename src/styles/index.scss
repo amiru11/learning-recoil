@@ -1,25 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
-@import 'reset';
+@import './reset';
+@import './variables';
 
 :root {
-  --dark-theme-color: #141c2f;
-  --dark-theme-sub-color: #1f2b48;
-  --dark-theme-font-color: #ffffff;
+  --background-color: #{$light-background-color};
+  --dimmed-color: #{$light-dimmed-color};
+  --lightest-font-color: #{$light-lightest-font-color};
+  --light-font-color: #{$light-light-font-color};
+  --middle-font-color: #{$light-middle-font-color};
+  --list-background-color: #{$light-list-background-color};
+  --link-color: #{$light-link-color};
+  --white-color: #{$white};
+  --azure-color: #{$azure};
+  --azure-a70-color: #{$azure_a70};
+  --azure-a80-color: #{$azure_a80};
 }
 
 html,
 body {
-  background-color: var(--dark-theme-color);
-  color: #ffffff;
+  background-color: var(--background-color);
+  color: var(--lightest-font-color);
   font-family: 'Jua', -apple-system, 'Segoe UI', 'Roboto', sans-serif;
-  // height: auto;
   min-height: 100%;
+  * {
+    font: inherit;
+  }
 }
 
 body {
-  * {
-    font: inherit;
+  &.dark {
+    --background-color: #{$dark-background-color};
+    --dimmed-color: #{$dark-dimmed-color};
+    --lightest-font-color: #{$dark-lightest-font-color};
+    --light-font-color: #{$dark-light-font-color};
+    --middle-font-color: #{$dark-middle-font-color};
+    --list-background-color: #{$dark-list-background-color};
+    --link-color: #{$dark-link-color};
   }
 }
 

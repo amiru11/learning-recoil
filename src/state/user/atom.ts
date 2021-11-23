@@ -1,4 +1,7 @@
 import { atom } from 'recoil';
+import { THEME_TYPE } from 'contants';
+
+const { LIGHT } = THEME_TYPE;
 /**
  * Atom
  * Recoil의 단위 데이터이다. 스토어에 저장되고 추출되는 데이터는 모두 Atom을 기반
@@ -11,6 +14,11 @@ export const userAtom = atom({
 });
 
 export const keywordAtom = atom({
-  key: 'keyword',
-  default: 'octocat'
+  key: 'keywordAtom',
+  default: 'octocat',
+});
+
+export const themeTypeAtom = atom({
+  key: 'themeTypeAtom',
+  default: LIGHT,
 });

@@ -2,3 +2,31 @@
 $breakpoint-mobile: 480px;
 $breakpoint-tablet: 767px;
 $breakpoint-desktop: 1024px;
+
+// index
+$dimmed-color: #eef5db;
+$dark-gray: #333333;
+$middle-gray: #7d7d7d;
+$light-gray: #aaaaaa;
+$white: #ffffff;
+$azure: rgba(3, 120, 254, 1);
+$azure_a70: rgba(3, 120, 254, 0.7);
+$azure_a80: rgba(3, 120, 254, 0.8);
+
+// @Dark Theme
+$dark-background-color: #141c2f;
+$dark-dimmed-color: #1f2b48;
+$dark-lightest-font-color: #ffffff;
+$dark-light-font-color: #eeeeee;
+$dark-middle-font-color: #d8d7d7;
+$dark-list-background-color: #151c2f;
+$dark-link-color: #bb72ec;
+
+// @Light Theme
+$light-background-color: #f6f8ff;
+$light-dimmed-color: #fefefe;
+$light-lightest-font-color: #000000;
+$light-light-font-color: #141d2f;
+$light-middle-font-color: #2b3442;
+$light-list-background-color: #f6f8ff;
+$light-link-color: #0079ff;

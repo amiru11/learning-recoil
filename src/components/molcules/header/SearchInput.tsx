@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useRecoilState } from 'recoil';
+import { useSetRecoilState } from 'recoil';
 import { GoSearch } from 'react-icons/go';
 import { keywordAtom } from 'state/user';
 
@@ -9,7 +9,7 @@ import { Input, Button } from 'components/atoms';
 
 function SearchInput(): JSX.Element {
   const [username, setUsername] = useState<string>('');
-  const [keyword, setKeyword] = useRecoilState(keywordAtom);
+  const setKeyword = useSetRecoilState(keywordAtom);
 
   const handleChangeUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(event.target.value);
@@ -20,6 +20,16 @@ function SearchInput(): JSX.Element {
     setKeyword(username);
   };
 
+  const handleKeyDown = ({
+    key,
+    preventDefault,
+  }: React.KeyboardEvent<HTMLInputElement>) => {
+    preventDefault();
+    if (key === 'Enter') {
+      handleClickSumbit();
+    }
+  };
+
   return (
     <div className="search-input-container">
       <GoSearch color="#0378fe" size={20} />
@@ -27,6 +37,7 @@ function SearchInput(): JSX.Element {
         type="text"
         value={username}
         handleChange={handleChangeUsername}
+        handleKeyDown={handleKeyDown}
         placeholder="Search GitHub username.."
       />
       <Button

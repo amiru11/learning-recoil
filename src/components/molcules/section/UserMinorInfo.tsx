@@ -1,11 +1,13 @@
 import React from 'react';
 import { GoLocation, GoLink, GoBriefcase } from 'react-icons/go';
-import { CgTwitter } from 'react-icons/cg';
+import { GrTwitter } from 'react-icons/gr';
+import { THEME_TYPE } from 'contants';
 
 import './UserMinorInfo.scss';
 
 import { Alink } from 'components/atoms';
 
+const { LIGHT, DARK } = THEME_TYPE;
 interface IUserMinorInfoProps {
   location: string;
   twitterUsername: string;
@@ -23,19 +25,19 @@ function UserMinorInfo({
     <div className="minor-info-container">
       <ul className="icon-list">
         <li className="icon-list-item">
-          <GoLocation size="16" color="#ffffff" />
+          <GoLocation size="16" />
           <span className="desc">{location}</span>
         </li>
         <li className="icon-list-item">
-          <CgTwitter size="16" color="#ffffff" />
+          <GrTwitter size="16" />
           <span className="desc">{twitterUsername}</span>
         </li>
         <li className="icon-list-item">
-          <GoLink size="16" color="#ffffff" />
+          <GoLink size="16" />
           <Alink className="desc" href={blog} text={blog} />
         </li>
         <li className="icon-list-item">
-          <GoBriefcase size="16" color="#ffffff" />
+          <GoBriefcase size="16" />
           <span className="desc">{company}</span>
         </li>
       </ul>
