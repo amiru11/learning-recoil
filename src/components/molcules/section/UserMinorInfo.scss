@@ -30,10 +30,10 @@
       }
     }
   }
-  @include respond(tablet) {
+  @include responsive(tablet) {
   }
 
-  @include respond(mobile) {
+  @include responsive(mobile) {
     .icon-list {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(4, 1fr);

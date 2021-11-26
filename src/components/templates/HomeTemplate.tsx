@@ -2,14 +2,15 @@ import React, { Suspense } from 'react';
 
 import './HomeTemplate.scss';
 
-import { Header, UserSection } from 'components/organisms';
+import { Header, UserSection, PlaceholderSection } from 'components/organisms';
 
 function HomeTemplate(): JSX.Element {
   return (
     <div className="home-container">
       <Header />
-      <Suspense fallback={<>Loading...</>}>
+      <Suspense fallback={<PlaceholderSection />}>
         <UserSection />
+        <PlaceholderSection />
       </Suspense>
     </div>
   );

@@ -16,8 +16,7 @@ function SearchInput(): JSX.Element {
   };
 
   const handleClickSumbit = (): void => {
-    if (!username) return;
-    setKeyword(username);
+    setKeyword(!username ? 'octocat' : username);
   };
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {

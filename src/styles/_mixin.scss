@@ -1,6 +1,6 @@
 @import 'variables';
 
-@mixin respond($breakpoint) {
+@mixin responsive($breakpoint) {
   // $breakpoint is simply a variable that can have several values
 
   @if $breakpoint==tablet {
@@ -16,5 +16,17 @@
     @media only screen and (max-width: $breakpoint-mobile) {
       @content;
     }
+  }
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
   }
 }

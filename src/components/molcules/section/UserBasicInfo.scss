@@ -12,6 +12,9 @@
     margin-left: 20px;
 
     .title-wrap {
+      span {
+        font-size: 1.4rem;
+      }
       .title {
         font-size: 1.4rem;
         margin-bottom: 10px;
@@ -35,7 +38,7 @@
       display: none;
     }
   }
-  @include respond(tablet) {
+  @include responsive(tablet) {
     .info-wrap {
       grid-auto-flow: column;
       grid-template-columns: 1fr;
@@ -51,7 +54,7 @@
     }
   }
 
-  @include respond(mobile) {
+  @include responsive(mobile) {
     .info-wrap {
       grid-auto-flow: column;
       grid-template-columns: 1fr;

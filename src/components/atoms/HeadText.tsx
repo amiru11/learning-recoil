@@ -6,7 +6,7 @@ interface IHeadTextProps {
   className?: string;
 }
 
-function HeadText({ size, text, className }: IHeadTextProps) {
+function HeadText({ size, text, className }: IHeadTextProps): JSX.Element {
   if (size === 'h1') {
     return <h1 className={className}>{text}</h1>;
   }

@@ -5,6 +5,11 @@ import UserBasicInfo from './section/UserBasicInfo';
 import UserMajorInfo from './section/UserMajorInfo';
 import UserMinorInfo from './section/UserMinorInfo';
 
+import UserThumbnailPlaceHolder from './placeholder/UserThumbnail';
+import UserBasicInfoPlaceHolder from './placeholder/UserBasicInfo';
+import UserMajorInfoPlaceHolder from './placeholder/UserMajorInfo';
+import UserMinorInfoPlaceHolder from './placeholder/UserMinorInfo';
+
 export {
   SearchInput,
   ThemeButton,
@@ -12,4 +17,8 @@ export {
   UserBasicInfo,
   UserMajorInfo,
   UserMinorInfo,
+  UserThumbnailPlaceHolder,
+  UserBasicInfoPlaceHolder,
+  UserMajorInfoPlaceHolder,
+  UserMinorInfoPlaceHolder,
 };

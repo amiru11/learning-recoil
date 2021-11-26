@@ -1,11 +1,18 @@
+@import '../../styles/mixin';
+
 .home-container {
   width: 700px;
   margin: 0 auto;
   padding: 0 1rem;
-}
+  position: relative;
 
-@media screen and (max-width: 767px) {
-  .home-container {
-    width: calc(100% - 1em);
+  @include responsive(mobile) {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  @include responsive(tablet) {
+    width: 100%;
   }
 }

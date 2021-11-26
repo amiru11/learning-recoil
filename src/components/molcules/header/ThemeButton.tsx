@@ -39,17 +39,20 @@ function ThemeButton(): JSX.Element {
       buttonTitle="theme Mode change"
       handleClick={handleThemeChangeHandler}
     >
-      {themeType === LIGHT ? (
-        <>
-          <span className="title">{DARK}</span>
-          <MdDarkMode size={15} color="#000000" />
-        </>
-      ) : (
-        <>
-          <span className="title">{LIGHT}</span>
-          <MdLightMode size={15} color="#ffffff" />
-        </>
-      )}
+      <>
+        {themeType === LIGHT && (
+          <>
+            <span className="title">{DARK}</span>
+            <MdDarkMode size={15} color="#000000" />
+          </>
+        )}
+        {themeType === DARK && (
+          <>
+            <span className="title">{LIGHT}</span>
+            <MdLightMode size={15} color="#ffffff" />
+          </>
+        )}
+      </>
     </Button>
   );
 }

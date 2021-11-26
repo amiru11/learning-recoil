@@ -1,3 +1,5 @@
+@import '../../../styles/mixin';
+
 .search-input-container {
   background-color: var(--dimmed-color);
   border-radius: 16px;
@@ -29,6 +31,13 @@
 
     &:active {
       background-color: var(--azure-a80-color);
+    }
+  }
+  @include responsive(mobile) {
+    border-radius: 0;
+
+    input {
+      font-size: 14px;
     }
   }
 }
